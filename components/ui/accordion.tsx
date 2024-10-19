@@ -22,9 +22,7 @@ export default function Accordion({ title, children }: AccordionProps) {
     </svg>
   )
 
-  function toggleAccordion() {
-    setOpen(isOpen ? false : true);
-  }
+  const toggleAccordion = () => setOpen(!isOpen);
 
   return (
     <div className="border-b border-slate-200">
@@ -37,7 +35,7 @@ export default function Accordion({ title, children }: AccordionProps) {
           {isOpen ? downSVG : upSVG}
         </span>
       </button>
-      <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'h-fit' : 'h-0'}`}>
+      <div className={`overflow-hidden duration-500 ${isOpen ? 'h-48' : 'h-0'}`}>
         {children}
       </div>
     </div >
