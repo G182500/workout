@@ -9,18 +9,18 @@ interface CarouselProps {
 const Carousel = ({ data }: CarouselProps) => {
   const [currentImg, setCurrentImg] = useState(0)
 
-  const carouselSize = { width: 288, height: 288 }  // h-72 = 288px
+  const carouselSize = { width: 320, height: 320 }  // h-80 = 320px
   const carouselRef = useRef(null)
 
   return (
-    <>
-      <div className='w-72 h-72 rounded-md overflow-hidden relative'>
+    <div className='flex flex-col items-center gap-3 w-full'>
+      <div className='w-80 h-80 rounded-md overflow-hidden relative'>
         <div
           ref={carouselRef}
           style={{
             left: -currentImg * carouselSize.width
           }}
-          className='w-full h-full absolute flex transition-all duration-300'>
+          className='w-full h-full absolute flex transition-all duration-500'>
           {data.map((v, i) => (
             <div key={i} className='relative shrink-0 w-full h-full'>
               <Image
@@ -34,8 +34,7 @@ const Carousel = ({ data }: CarouselProps) => {
         </div>
       </div>
 
-      {/* Navigation buttons */}
-      <div className='flex justify-center mt-3'>
+      <div id="navigation-buttons" className='flex space-x-2'>
         <button
           disabled={currentImg === 0}
           onClick={() => setCurrentImg(prev => prev - 1)}
@@ -51,7 +50,7 @@ const Carousel = ({ data }: CarouselProps) => {
           {">"}
         </button>
       </div>
-    </>
+    </div>
   )
 }
 

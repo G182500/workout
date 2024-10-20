@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from "react";
 
 interface AccordionProps {
@@ -10,7 +9,7 @@ interface AccordionProps {
 export default function Accordion({ title, children }: AccordionProps) {
   const [isOpen, setOpen] = useState<boolean>(false);
 
-  const svgStyle = "text-slate-200 w-4 h-4";
+  const svgStyle = "text-slate-200 w-5 h-5";
 
   const downSVG = (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className={svgStyle}>
@@ -30,12 +29,12 @@ export default function Accordion({ title, children }: AccordionProps) {
     <div className="border-b border-slate-200">
       <button
         onClick={toggleAccordion}
-        className="w-full flex justify-between items-center py-5 text-slate-200"
+        className="w-full flex justify-between items-center px-2 py-5 text-slate-200"
       >
-        <span>{title}</span>
+        <span className="text-lg">{title}</span>
         {isOpen ? upSVG : downSVG}
       </button>
-      <div className={`overflow-hidden duration-500 ${isOpen ? 'h-96' : 'h-0'}`}>
+      <div className={`duration-500 ${isOpen ? 'h-[600px] overflow-y-auto' : 'overflow-hidden h-0'}`}>
         {children}
       </div>
     </div >
