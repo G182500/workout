@@ -15,7 +15,7 @@ export default function Home() {
       name: "PULLEY FRENTE", content: (
         <>
           <p className="text-center text-sm opacity-80">
-            Trabalha especialmente os músculos latíssimos do dorso, principais responsáveis pela forma &apos;V&apos;.
+            Ênfase nos músculos latíssimos do dorso, principais responsáveis pela forma &apos;V&apos;.
           </p>
           <SetsLog />
           <Carousel data={images} />
