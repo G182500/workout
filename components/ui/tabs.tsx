@@ -15,16 +15,16 @@ const Tabs = ({ tabs }: TabsProps) => {
           <button
             key={index}
             onClick={() => setActiveTab(index)}
-            className={`text-sm py-2 px-4 focus:outline-none ${activeTab === index
-              ? 'border-b-2 border-green-600 text-green-600'
-              : 'text-gray-500 hover:text-green-600'
+            className={`py-2 px-4 italic focus:outline-none ${activeTab === index
+              ? 'border-b-2 border-green-400 text-green-400'
+              : 'opacity-50'
               }`}
           >
             {tab.name}
           </button>
         ))}
       </div>
-      <div className="p-4">
+      <div className="flex flex-col gap-4 p-4">
         {tabs[activeTab].content}
       </div>
     </div>

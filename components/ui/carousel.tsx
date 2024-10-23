@@ -38,16 +38,16 @@ const Carousel = ({ data }: CarouselProps) => {
         <button
           disabled={currentImg === 0}
           onClick={() => setCurrentImg(prev => prev - 1)}
-          className={`border px-4 py-2 font-bold ${currentImg === 0 && 'opacity-50'}`}
+          className={`text-xs border-2 px-4 py-3 font-bold ${currentImg === 0 ? 'border-green-300' : 'opacity-50'}`}
         >
-          {"<"}
+          FASE EXCÊNTRICA
         </button>
         <button
           disabled={currentImg === data.length - 1}
           onClick={() => setCurrentImg(prev => prev + 1)}
-          className={`border px-4 py-2 font-bold ${currentImg === data.length - 1 && 'opacity-50'}`}
+          className={`text-xs border-2 px-4 py-3 font-bold ${currentImg === data.length - 1 ? 'border-green-300' : 'opacity-50'}`}
         >
-          {">"}
+          FASE CONCÊNTRICA
         </button>
       </div>
     </div>

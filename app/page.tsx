@@ -1,3 +1,4 @@
+import SetsLog from "@/components/sets-log";
 import Accordion from "@/components/ui/accordion";
 import Carousel from "@/components/ui/carousel";
 import Tabs from "@/components/ui/tabs";
@@ -9,19 +10,16 @@ export default function Home() {
     { image: "/imgs/back/pulley2.jpg" }
   ]
 
-  /*
-  <div className="relative h-72 w-72">
-    <Image fill src={`/imgs/back/pulley1.jpg`} quality={100} alt="Imagem Pulley Frente 1" className="object-cover rounded-md" />
-  </div>
-  */
-
   const tabs = [
     {
       name: "PULLEY FRENTE", content: (
         <>
+          <p className="text-center text-sm opacity-80">
+            Trabalha especialmente os músculos latíssimos do dorso, principais responsáveis pela forma &apos;V&apos;.
+          </p>
+          <SetsLog />
           <Carousel data={images} />
-          <br />
-          <p className="text-sm opacity-80"><strong>DICA:</strong> Retorne lentamente para a posição original, estendendo os braços para executar esse movimento.</p>
+          <p className="text-sm opacity-80 italic"><strong>DICA:</strong> Retorne lentamente para a posição original, estendendo os braços para executar esse movimento.</p>
         </>
       )
     },

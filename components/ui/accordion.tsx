@@ -31,7 +31,7 @@ export default function Accordion({ title, children }: AccordionProps) {
         onClick={toggleAccordion}
         className="w-full flex justify-between items-center px-2 py-5 text-slate-200"
       >
-        <span className="text-lg">{title}</span>
+        <span className="text-xl">{title}</span>
         {isOpen ? upSVG : downSVG}
       </button>
       <div className={`duration-500 ${isOpen ? 'h-[600px] overflow-y-auto' : 'overflow-hidden h-0'}`}>
