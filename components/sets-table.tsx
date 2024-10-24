@@ -1,8 +1,8 @@
 import { PenBoxIcon } from "lucide-react";
 
 export default function SetsTable() {
-  const headerStyle = "border text-center"
-  const cellStyle = "border text-center text-lg py-1";
+  const headerStyle = "border bg-gray-800 text-center"
+  const cellStyle = "border bg-gray-600 text-center text-lg py-1";
 
   return (
     <div className="flex flex-col items-center w-full">
