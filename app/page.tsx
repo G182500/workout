@@ -1,6 +1,5 @@
-import SetsLog from "@/components/sets-log";
+import ExerciseInformation from "@/components/exercise-information";
 import Accordion from "@/components/ui/accordion";
-import Carousel from "@/components/ui/carousel";
 import Tabs from "@/components/ui/tabs";
 import Link from "next/link";
 
@@ -20,47 +19,18 @@ export default function Home() {
     { image: "/imgs/back/highrow2.jpg" },
   ];
 
-  //<p className="text-sm opacity-80 italic"><strong>DICA:</strong> Retorne lentamente para a posição original, estendendo os braços para executar esse movimento.</p>
-
   const tabs = [
     {
       name: "REMADA ALTA",
-      content: (
-        <>
-          <p className="text-center text-sm opacity-80">
-            Trabalha a parte superior das costas, especificamente o trapézio,
-            romboides e deltoides posteriores.
-          </p>
-          <SetsLog />
-          <Carousel data={images3} />
-        </>
-      ),
+      content: <ExerciseInformation images={images3} description="Trabalha a parte superior das costas, especificamente o trapézio, romboides e deltoides posteriores." />
     },
     {
       name: "PULLEY FRENTE",
-      content: (
-        <>
-          <p className="text-center text-sm opacity-80">
-            Ênfase nos músculos latíssimos do dorso, principais responsáveis
-            pela forma &apos;V&apos;.
-          </p>
-          <SetsLog />
-          <Carousel data={images} />
-        </>
-      ),
+      content: <ExerciseInformation images={images} description="Ênfase nos músculos latíssimos do dorso, principais responsáveis pela forma &apos;V&apos;." />
     },
     {
       name: "PULLOVER COM CABO",
-      content: (
-        <>
-          <p className="text-center text-sm opacity-80">
-            Desenvolve a parte superior das costas, especificamente o trapézio,
-            romboides e deltoides posteriores.
-          </p>
-          <SetsLog />
-          <Carousel data={images2} />
-        </>
-      ),
+      content: <ExerciseInformation images={images2} description="Desenvolve a parte superior das costas, especificamente o trapézio, romboides e deltoides posteriores." />
     },
   ];
 

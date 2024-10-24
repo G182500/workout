@@ -1,6 +1,6 @@
 import { PenBoxIcon } from "lucide-react";
 
-export default function SetsLog() {
+export default function SetsTable() {
   const headerStyle = "border text-center"
   const cellStyle = "border text-center text-lg py-1";
 
