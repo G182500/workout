@@ -10,7 +10,30 @@ export default function Home() {
     { image: "/imgs/back/pulley2.jpg" }
   ]
 
+  const images2 = [
+    { image: "/imgs/back/pullover1.jpg" },
+    { image: "/imgs/back/pullover2.jpg" }
+  ]
+
+  const images3 = [
+    { image: "/imgs/back/highrow1.jpg" },
+    { image: "/imgs/back/highrow2.jpg" }
+  ]
+
+  //<p className="text-sm opacity-80 italic"><strong>DICA:</strong> Retorne lentamente para a posição original, estendendo os braços para executar esse movimento.</p>
+
   const tabs = [
+    {
+      name: "REMADA ALTA", content: (
+        <>
+          <p className="text-center text-sm opacity-80">
+            Trabalha a parte superior das costas, especificamente o trapézio, romboides e deltoides posteriores.
+          </p>
+          <SetsLog />
+          <Carousel data={images3} />
+        </>
+      )
+    },
     {
       name: "PULLEY FRENTE", content: (
         <>
@@ -19,14 +42,17 @@ export default function Home() {
           </p>
           <SetsLog />
           <Carousel data={images} />
-          <p className="text-sm opacity-80 italic"><strong>DICA:</strong> Retorne lentamente para a posição original, estendendo os braços para executar esse movimento.</p>
         </>
       )
     },
     {
-      name: "REMADA BAIXA", content: (
+      name: "PULLOVER COM CABO", content: (
         <>
-          Em desenvolvimento...
+          <p className="text-center text-sm opacity-80">
+            Desenvolve a parte superior das costas, especificamente o trapézio, romboides e deltoides posteriores.
+          </p>
+          <SetsLog />
+          <Carousel data={images2} />
         </>
       )
     }
@@ -38,7 +64,15 @@ export default function Home() {
         <Tabs tabs={tabs}></Tabs>
       </Accordion>
 
-      <Accordion title="TRICEPS">
+      <Accordion title="CHEST & SHOULDER">
+        <p>Em desenvolvimento...</p>
+      </Accordion>
+
+      <Accordion title="LEG DAY">
+        <p>Em desenvolvimento...</p>
+      </Accordion>
+
+      <Accordion title="ARMS">
         <p>Em desenvolvimento...</p>
       </Accordion>
 

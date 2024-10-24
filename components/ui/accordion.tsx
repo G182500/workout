@@ -34,7 +34,7 @@ export default function Accordion({ title, children }: AccordionProps) {
         <span className="text-xl">{title}</span>
         {isOpen ? upSVG : downSVG}
       </button>
-      <div className={`duration-500 ${isOpen ? 'h-[660px] overflow-y-auto' : 'overflow-hidden h-0'}`}>
+      <div className={`duration-500 ${isOpen ? 'h-[680px] overflow-y-auto' : 'overflow-hidden h-0'}`}>
         {children}
       </div>
     </div >

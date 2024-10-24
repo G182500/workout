@@ -10,12 +10,12 @@ const Tabs = ({ tabs }: TabsProps) => {
 
   return (
     <div className="w-full">
-      <div className="flex space-x-4 border-b">
+      <div className="flex border-b overflow-y-auto space-x-4 max-h-20">
         {tabs.map((tab, index) => (
           <button
             key={index}
             onClick={() => setActiveTab(index)}
-            className={`py-2 px-4 italic focus:outline-none ${activeTab === index
+            className={`py-2 px-4 italic whitespace-nowrap focus:outline-none ${activeTab === index
               ? 'border-b-2 border-green-400 text-green-400'
               : 'opacity-50'
               }`}
