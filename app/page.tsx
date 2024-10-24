@@ -5,18 +5,18 @@ import Link from "next/link";
 
 export default function Home() {
   const images = [
-    { image: "/imgs/back/pulley1.jpg" },
-    { image: "/imgs/back/pulley2.jpg" },
+    { image: "/imgs/back/pulley1.jpg", alt: "Pulley 1" },
+    { image: "/imgs/back/pulley2.jpg", alt: "Pulley 2" },
   ];
 
   const images2 = [
-    { image: "/imgs/back/pullover1.jpg" },
-    { image: "/imgs/back/pullover2.jpg" },
+    { image: "/imgs/back/pullover1.jpg", alt: "Pullover 1" },
+    { image: "/imgs/back/pullover2.jpg", alt: "Pullover 2" },
   ];
 
   const images3 = [
-    { image: "/imgs/back/highrow1.jpg" },
-    { image: "/imgs/back/highrow2.jpg" },
+    { image: "/imgs/back/highrow1.jpg", alt: "Highrow 1" },
+    { image: "/imgs/back/highrow2.jpg", alt: "Highrow 2" },
   ];
 
   const tabs = [
@@ -54,7 +54,7 @@ export default function Home() {
 
       <br />
       <Link
-        className="ml-2 text-lg text-slate-200"
+        className="ml-2 text-xl text-slate-200"
         href="https://open.spotify.com/playlist/1pIYO77msXjAuXrNeDZCYM?si=23f8896f292641a9"
       >
         SPOTIFY
