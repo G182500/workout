@@ -1,9 +1,10 @@
 "use client"
 import { useState } from "react";
+import CategoryLoader from "../category-loader";
 
 interface AccordionProps {
   title: string;
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 
 export default function Accordion({ title, children }: AccordionProps) {
@@ -34,8 +35,8 @@ export default function Accordion({ title, children }: AccordionProps) {
         <span className="text-xl">{title}</span>
         {isOpen ? upSVG : downSVG}
       </button>
-      <div className={`duration-700 ${isOpen ? 'h-[680px] overflow-y-auto' : 'overflow-hidden h-0'}`}>
-        {children}
+      <div className={`duration-500 ${isOpen ? 'h-[680px] overflow-y-auto' : 'overflow-hidden h-0'}`}>
+        {children || <CategoryLoader name={title} activated={isOpen} />}
       </div>
     </div >
   )
