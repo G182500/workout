@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import QueryCliProvider from "@/contexts/query-client-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,9 +15,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen">
-        <div className="flex flex-col container mx-auto px-2">
-          {children}
-        </div>
+        <QueryCliProvider>
+          <div className="flex flex-col container mx-auto px-2">
+            {children}
+          </div>
+        </QueryCliProvider>
       </body>
     </html>
   );

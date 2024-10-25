@@ -17,7 +17,7 @@ export const useGetExercisesByCategory = (
     ...options,
     queryKey: ["ExercisesByCategory"],
     queryFn: async () => {
-      const resp = await fetch(`/api/product/get-by-category/${category}`, {
+      const resp = await fetch(`/api/workout/get-by-category/${category}`, {
         method: "GET",
       });
       const { message, exercises }: GetExercisesByCategoryOutput =

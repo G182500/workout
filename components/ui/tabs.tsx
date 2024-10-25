@@ -17,7 +17,7 @@ const Tabs = ({ tabs }: TabsProps) => {
               key={index}
               onClick={() => setActiveTab(index)}
               className={`py-2 px-4 italic whitespace-nowrap focus:outline-none ${activeTab === index
-                ? 'border-b-2 border-green-400 text-green-400'
+                ? 'border-b-[3px] border-green-400 text-green-400'
                 : 'opacity-50'
                 }`}
             >

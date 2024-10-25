@@ -1,9 +1,22 @@
+"use client"
 import ExerciseInformation from "@/components/exercise-information";
 import Accordion from "@/components/ui/accordion";
 import Tabs from "@/components/ui/tabs";
+import { useGetExercisesByCategory } from "@/services/workout/use-get-by-category";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Home() {
+  const getExercises = useGetExercisesByCategory("BACK DAY", {
+    enabled: false,
+  });
+
+  const exercises = getExercises.data?.exercises;
+
+  useEffect(() => {
+    if (!exercises) getExercises.refetch();
+  }, []);
+
   const images = [
     { image: "/imgs/back/pulley1.jpg", alt: "Pulley 1" },
     { image: "/imgs/back/pulley2.jpg", alt: "Pulley 2" },
@@ -37,7 +50,7 @@ export default function Home() {
   return (
     <div>
       <Accordion title="BACK DAY">
-        <Tabs tabs={tabs}></Tabs>
+        <Tabs tabs={tabs} />
       </Accordion>
 
       <Accordion title="CHEST & SHOULDER">
